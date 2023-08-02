@@ -1,0 +1,80 @@
+local Library = loadstring(game:HttpGet("https://raw.githubusercontent.com/xHeptc/Kavo-UI-Library/main/source.lua"))()
+local Window = Library.CreateLib("Prison Life v3", "Ocean")
+
+-- MAIN
+local Main = Window:NewTab("Main")
+local MainSection = Main:NewSection("Main")
+
+MainSection:NewButton("Universal Hitbox Extender", "Self Explanatory | Press 'T' to enable.", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/1PXSvLEY"))()
+end)
+
+MainSection:NewButton("Infinitey Yield", "Self Explanatory | Has Vehicle Fly.", function()
+    loadstring(game:HttpGet('https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source'))()
+end)
+
+MainSection:NewButton("FE Invisible", "Self Explanatory | Equip tool until you turn invisible.", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/65CxAADL"))()
+end)
+
+MainSection:NewButton("ESP", "Self Explanatory | Auto Enabled.", function()
+    loadstring(game:HttpGet("https://pastebin.com/raw/2mPwYLHH"))()
+end)
+
+    --LOCAL PLAYER
+    local Player = Window:NewTab("Player")
+    local PlayerSection = Player:NewSection("Player")
+
+    PlayerSection:NewSlider("Walkspeed", "SPEED!!", 500, 16, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = s
+    end)
+
+    PlayerSection:NewSlider("Jumppower", "JUMP HIGH!!", 350, 50, function(s)
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = s
+    end)
+
+    PlayerSection:NewButton("Reset WS/JP", "Resets to all defaults", function()
+        game.Players.LocalPlayer.Character.Humanoid.JumpPower = 50
+        game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+    end)
+
+
+    --Other
+    local Other = Window:NewTab("Other")
+    local OtherSection = Other:NewSection("Other")
+
+    OtherSection:NewButton("Chat Spoofer", "Lets you chat for other people", function()
+        loadstring(game:HttpGet(('https://pastebin.com/raw/djBfk8Li'),true))()
+    end)
+
+    -- Teleports
+    local Teleports = Window:NewTab("Teleports")
+local TeleportsSection = Teleports:NewSection("Teleports")
+
+TeleportsSection:NewButton("Guards Gun Room Teleport", "Self Explanatory.", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1856.20447, 155.530777, 2696.8877, -0.999957561, -3.62939794e-08, -0.00921254884, -3.63019055e-08, 1, 6.93325397e-10, 0.00921254884, 1.02772901e-09, -0.999957561)
+end)
+
+TeleportsSection:NewButton("Criminal Spawn Base1 Teleport", "Self Explanatory.", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(82.643013, 149.671249, 2484.14526, 0.99999249, 0, -0.00386974984, 0, 1, 0, 0.00386974984, 0, 0.99999249)
+end)
+
+TeleportsSection:NewButton("Criminal Spawn Base2 Teleport", "Self Explanatory.", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1024.19446, 66.6401901, 1696.58215, 0.0115701584, 0, -0.999933064, 0, 1, 0, 0.999933064, 0, 0.0115701584)
+end)
+
+TeleportsSection:NewButton("Criminal Spawn Base3 Teleport", "Self Explanatory.", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1567.06494, 67.020813, 1391.45959, -0.999999702, -1.02537726e-07, -0.00073252013, -1.02510825e-07, 1, -3.67605111e-08, 0.00073252013, -3.66854103e-08, -0.999999702)
+end)
+
+TeleportsSection:NewButton("Prison Yard Tower Teleport", "Self Explanatory.", function()
+    game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(1848.57068, 185.562195, 3007.00757, 0.999833226, 5.04520408e-08, -0.018261794, -5.03655819e-08, 1, 5.19433474e-09, 0.018261794, -4.27370228e-09, 0.999833226)
+end)
+
+-- Credits
+local Credits = Window:NewTab("Credits")
+local CreditsSection = Credits:NewSection("Credits")
+
+CreditsSection:NewLabel("Wouldn't have been done without 1 FO.")
+CreditsSection:NewLabel("he provided a tutorial on how to make this gui.")
+CreditsSection:NewLabel("Creator: sebas_was.here | I love @E")
